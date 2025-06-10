@@ -7,24 +7,21 @@
                 </a>
             </div>
             <div
-                class="relative order-2 block flex-grow-0 cursor-pointer px-4 py-0"
+                class="relative order-2 block grow-0 cursor-pointer px-4 py-0"
                 @click.prevent="toggleMenu()"
                 v-if="getNavigation.length > 0">
                 <div
                     :class="{ 'opacity-0': showMenu, 'opacity-100': !showMenu }"
-                    class="mx-0 my-1 h-1 w-5 rounded-sm bg-vca-dark-500 transition-all duration-200"></div>
+                    class="mx-0 my-1 h-1 w-5 rounded-xs bg-vca-dark-500 transition-all duration-200"></div>
                 <div
                     :class="{ 'absolute bottom-1 rotate-45': showMenu }"
-                    class="mx-0 my-1 block h-1 w-5 rounded-sm bg-vca-dark-500 transition-all duration-200"></div>
+                    class="mx-0 my-1 block h-1 w-5 rounded-xs bg-vca-dark-500 transition-all duration-200"></div>
                 <div
-                    :class="{
-                        'absolute bottom-1 block -rotate-45': showMenu,
-                        hidden: !showMenu,
-                    }"
-                    class="mx-0 my-1 h-1 w-5 rounded-sm bg-vca-dark-500 transition-all duration-200"></div>
+                    :class="{ 'absolute bottom-1 block -rotate-45': showMenu, hidden: !showMenu }"
+                    class="mx-0 my-1 h-1 w-5 rounded-xs bg-vca-dark-500 transition-all duration-200"></div>
                 <div
                     :class="{ 'opacity-0': showMenu, 'opacity-100': !showMenu }"
-                    class="mx-0 my-1 h-1 w-5 rounded-sm bg-vca-dark-500 transition-all duration-200"></div>
+                    class="mx-0 my-1 h-1 w-5 rounded-xs bg-vca-dark-500 transition-all duration-200"></div>
             </div>
         </div>
         <div id="navContainer" class="fixed z-200 w-full bg-white">

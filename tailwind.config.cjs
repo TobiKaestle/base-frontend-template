@@ -1,7 +1,4 @@
 // tailwind.config.cjs
-// eslint-disable-next-line
-const { fontFamily: _fontFamily } = require('tailwindcss/defaultTheme');
-
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line
 module.exports = {
