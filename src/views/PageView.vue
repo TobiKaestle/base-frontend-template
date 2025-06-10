@@ -1,6 +1,6 @@
 <template>
     <div class="flex h-full">
-        <LeftNavigation class="hidden md:block" />
+        <LeftNavigation class="hidden xl:block" />
         <div class="grow p-2">
             <router-view class="container min-w-full"></router-view>
         </div>

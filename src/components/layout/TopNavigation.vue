@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed inset-x-0 z-10 h-20 w-screen shadow-md">
+    <header class="fixed inset-x-0 z-20 h-20 w-screen shadow-md">
         <div class="container mx-auto flex items-center justify-between py-4">
             <a href="/"><img class="h-12" src="@/assets/img/vca_logo.png" /></a>
 
@@ -9,7 +9,7 @@
                     <router-link
                         :title="$t('' + route?.meta?.title)"
                         :to="route.path"
-                        class="px-4"
+                        class="px-4 !font-header"
                         active-class="text-vca-base-500">
                         {{ $t('' + route?.meta?.title) }}
                     </router-link>

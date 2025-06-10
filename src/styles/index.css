@@ -1,18 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@vivaconagua/vueca/dist/style.css';
+@import 'tailwindcss';
 
-@layer base {
-    @font-face {
-        font-family: 'VeneerSoft';
-        src: url('@/assets/fonts/Veneer/23f300c2-6e76-46a1-8d80-c9f2e9de50aa.woff2') format('woff2');
-    }
-    @font-face {
-        font-family: 'Roboto Slab';
-        src: url('@/assets/fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'VeneerSoft';
+    src: url('../assets/fonts/Veneer/23f300c2-6e76-46a1-8d80-c9f2e9de50aa.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../assets/fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+@theme {
+    --font-header: 'VeneerSoft', 'sans-serif';
+    --font-sans: 'Roboto', system-ui, sans-serif;
+    --font-serif: 'Roboto Slab', system-ui, sans-serif;
+    --color-vca-base: #93e2ff;
+    --color-vca-base-100: #7cdcff;
+    --color-vca-base-200: #4ed0ff;
+    --color-vca-base-300: #20c3ff;
+    --color-vca-base-400: #00b1f1;
+    --color-vca-base-500: #008fc3;
+    --color-vca-base-600: #006d95;
+    --color-vca-base-700: #004c67;
+    --color-vca-base-800: #002a39;
+    --color-vca-base-900: #00080b;
+    --color-vca-dark-50: #0068f7;
+    --color-vca-dark-100: #0062e7;
+    --color-vca-dark-200: #0055c9;
+    --color-vca-dark-300: #0048aa;
+    --color-vca-dark-400: #003b8c;
+    --color-vca-dark-500: #002e6d;
+    --color-vca-dark-600: #00214e;
+    --color-vca-dark-700: #001430;
+    --color-vca-dark-800: #000711;
+    --color-vca-dark-900: #000000;
+}
+
+body {
+    margin: 0;
 }
 
 html,
@@ -26,4 +60,12 @@ h2,
 h3,
 h4 {
     font-family: VeneerSoft;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+h4 {
+    font-size: large;
 }
