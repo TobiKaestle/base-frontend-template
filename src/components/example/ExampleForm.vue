@@ -50,7 +50,7 @@
         if (v$.value.data.$invalid) {
             validate();
         } else {
-            emit('submit', data);
+            emit('submit', data.value);
         }
     };
     const data = ref(props.modelValue);
@@ -63,7 +63,7 @@
     watch(
         () => props.modelValue,
         (value) => {
-            data.value = ref(value).value;
+            data.value = value;
         }
     );
     const validations = () => {

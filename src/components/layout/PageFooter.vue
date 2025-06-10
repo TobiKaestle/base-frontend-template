@@ -1,7 +1,7 @@
 <template>
-    <footer class="text-l inset-x-0 bg-vca-base-500 p-4 font-serif text-white md:px-0">
+    <footer class="text-l inset-x-0 bg-vca-base-500 p-4 font-serif text-white xl:px-0">
         <div
-            class="container mx-auto flex flex-grow flex-wrap items-start justify-between md:flex-nowrap">
+            class="container mx-auto flex flex-grow flex-wrap items-start justify-between xl:flex-nowrap">
             <a
                 class="basis-full font-bold hover:text-vca-dark-500"
                 :href="$t('footer.legal.copyright.url')"
@@ -35,8 +35,8 @@
         </div>
     </footer>
 
-    <div class="mx-auto w-full bg-vca-dark pb-2 text-center !text-white md:hidden">
-        <div class="bg-vca-dark!text-white mx-auto w-fit">
+    <div class="mx-auto w-full bg-vca-dark-500 pb-2 text-center !text-white xl:hidden">
+        <div class="bg-vca-dark-500 !text-white mx-auto w-fit">
             <LanguageSelection
                 :type="languageType"
                 :theme="ThemeTypes.dark"

@@ -22,6 +22,7 @@ export default [
             'vue/html-closing-bracket-newline': 'off',
             '@typescript-eslint/no-empty-function': 'warn',
             '@typescript-eslint/explicit-module-boundary-types': 'warn',
+            '@typescript-eslint/no-unused-expressions': 'warn',
             '@typescript-eslint/no-explicit-any': 'warn',
         },
     },

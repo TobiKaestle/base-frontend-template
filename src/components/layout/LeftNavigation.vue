@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-64">
+    <aside class="w-64 !hidden xl:!block">
         <div class="h-full overflow-y-auto bg-white py-4 shadow-right">
             <ul class="space-y-2">
                 <li

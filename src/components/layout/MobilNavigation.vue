@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed inset-x-0 z-10 h-16 w-screen bg-white py-4 shadow-md">
+    <header class="fixed inset-x-0 z-20 h-16 w-screen bg-white py-4 shadow-md">
         <div class="container mx-auto flex items-center justify-between">
             <div class="px-4">
                 <a href="/">
@@ -27,24 +27,23 @@
                     class="mx-0 my-1 h-1 w-5 rounded-sm bg-vca-dark-500 transition-all duration-200"></div>
             </div>
         </div>
-        <div id="navContainer" class="fixed z-200 w-full">
+        <div id="navContainer" class="fixed z-200 w-full bg-white">
             <div class="mobile-nav-bar">
                 <ul
                     :class="{
                         'visible absolute opacity-100 shadow-bottom': showMenu,
                         'invisible opacity-0': !showMenu,
                     }"
-                    class="absolute right-0 top-0 z-100 mt-4 block w-full list-none justify-center border-b-2 border-t-2 border-b-vca-dark-500 p-0 transition-all duration-200">
+                    class="absolute right-0 top-0 mt-4 block w-full list-none justify-center border-b-2 border-t-2 border-b-vca-dark-500 p-0 transition-all duration-200">
                     <li
-                        class="flex-auto"
                         v-for="route in getNavigation"
                         @click.prevent="navigate(route)"
                         :key="route.name">
                         <router-link
-                            active-class="border-b-2 border-b-vca-dark-500 bg-vca-base-500 hover:text-white"
+                            active-class="border-b-2 border-b-vca-dark-500 font-bold bg-vca-base-500 hover:!text-white"
                             :title="$t('' + route?.meta?.title)"
                             :to="route.path"
-                            class="block cursor-pointer bg-white p-3 text-center text-vca-dark-500 no-underline transition-all duration-200 hover:text-opacity-75"
+                            class="block cursor-pointer bg-white p-3 text-center text-vca-base-500 no-underline transition-all duration-200 hover:text-vca-dark-500/75"
                             :class="{
                                 'bg-vca-dark-500 text-white hover:font-bold hover:text-white':
                                     route.path == definedRoute.fullPath,
@@ -55,8 +54,8 @@
                             class="relative z-50 flex w-full flex-col flex-wrap border-b-2 border-b-vca-dark-500 text-center"
                             v-if="route.children && currentRoute?.name == route.name">
                             <router-link
-                                active-class="border-b-0 bg-vca-dark-500 font-bold !text-white"
-                                class="!bg-white p-2 !text-vca-dark-500 hover:text-opacity-75"
+                                active-class="border-b-0 !bg-vca-dark-500 font-bold !text-white"
+                                class="bg-white p-2 text-vca-dark-500 hover:text-opacity-75"
                                 @click.prevent="toggleMenu()"
                                 v-for="subTab in getSubNavigation(route.children)"
                                 :key="subTab.name"

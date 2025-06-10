@@ -1,5 +1,5 @@
 <template>
-    <div class="border-b-2 p-1 text-xs text-gray-400 md:p-2 md:text-base">
+    <div class="z-10 relative p-1 text-xs text-gray-400 xl:p-2 shadow-md">
         <ul class="flex items-center justify-start gap-1">
             <li :key="route.name" v-for="(route, index) in navigationPositionList">
                 <router-link :title="route.meta.title" :to="route.path">
