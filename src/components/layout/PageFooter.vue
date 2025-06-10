@@ -3,7 +3,7 @@
         <div
             class="container mx-auto flex flex-grow flex-wrap items-start justify-between xl:flex-nowrap">
             <a
-                class="basis-full font-bold hover:text-vca-dark-500"
+                class="basis-full font-bold hover:!text-vca-dark-500"
                 :href="$t('footer.legal.copyright.url')"
                 :title="$t('footer.legal.copyright.header')"
                 target="_blank">
@@ -11,21 +11,21 @@
             </a>
             <div class="flex basis-auto flex-col">
                 <a
-                    class="whitespace-nowrap p-1 hover:text-vca-dark-500"
+                    class="whitespace-nowrap p-1 hover:!text-vca-dark-500"
                     :href="$t('footer.legal.emission.url')"
                     :title="$t('footer.legal.emission.header')"
                     target="_blank">
                     {{ $t('footer.legal.emission.header') }}
                 </a>
                 <a
-                    class="whitespace-nowrap p-1 hover:text-vca-dark-500"
+                    class="whitespace-nowrap p-1 hover:!text-vca-dark-500"
                     :href="$t('footer.legal.security.url')"
                     :title="$t('footer.legal.security.header')"
                     target="_blank">
                     {{ $t('footer.legal.security.header') }}
                 </a>
                 <a
-                    class="whitespace-nowrap p-1 hover:text-vca-dark-500"
+                    class="whitespace-nowrap p-1 hover:!text-vca-dark-500"
                     :href="$t('footer.legal.imprint.url')"
                     :title="$t('footer.legal.imprint.header')"
                     target="_blank">
