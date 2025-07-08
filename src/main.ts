@@ -9,7 +9,6 @@ import i18n from './i18n';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import Notifications from '@kyvg/vue3-notification';
 import './styles/index.css';
-
 import matomo from './matomo';
 import { router } from './router';
 import { createPinia } from 'pinia';

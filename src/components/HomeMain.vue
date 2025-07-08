@@ -3,13 +3,15 @@
         <PageLogo />
         <Headline class="text-center" :type="HeadlineType.H1">{{ $t('home.portal') }}</Headline>
         <div>
-            <Button
-                class="m-auto flex"
-                :type="ButtonType.Outline"
-                @click="showInfo = true"
-                :size="ButtonSize.Small">
-                {{ $t('button.more_infos') }}
-            </Button>
+            <div class="m-auto w-max">
+                <Button
+                    class="flex"
+                    :type="ButtonType.Outline"
+                    @click="showInfo = true"
+                    :size="ButtonSize.Small">
+                    {{ $t('button.more_infos') }}
+                </Button>
+            </div>
         </div>
     </Card>
     <Popup

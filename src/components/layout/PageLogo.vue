@@ -1,6 +1,6 @@
 <template>
     <Card>
-        <div class="md:m-auto md:w-[50%]">
+        <div class="xl:m-auto xl:w-[50%]">
             <img
                 src="~@/assets/img/vca_logo_neutral.png"
                 class="mx-auto"

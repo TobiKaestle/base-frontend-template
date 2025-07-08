@@ -1,13 +1,9 @@
 <template>
     <div id="app" class="flex h-screen flex-col" :class="getTheme">
         <notifications position="top center" width="100%" />
-        <TopNavigation
-            v-if="!store.hideNavigation"
-            class="hidden bg-white dark:bg-vca-dark-500 dark:text-white md:inline" />
-        <MobilNavigation v-if="!store.hideNavigation" class="inline md:hidden" />
-        <div
-            id="app_content"
-            class="mt-16 grow bg-white dark:bg-vca-dark-500 dark:text-white md:mt-20">
+        <TopNavigation v-if="!store.hideNavigation" class="!hidden bg-white xl:!inline" />
+        <MobilNavigation v-if="!store.hideNavigation" class="!inline xl:!hidden" />
+        <div id="app_content" class="mt-16 xl:mt-20 grow bg-white">
             <BreadCrumbs v-if="!store.hideNavigation" class="block" />
             <router-view />
         </div>
@@ -18,7 +14,6 @@
     import Footer from '@/components/layout/PageFooter.vue';
     import TopNavigation from '@/components/layout/TopNavigation.vue';
     import { useTheme } from '@vivaconagua/vueca';
-    import '@vivaconagua/vueca/dist/style.css';
     import { computed, onMounted, watch } from 'vue';
     import { useI18n } from 'vue-i18n';
     import BreadCrumbs from './components/layout/BreadCrumbs.vue';
