@@ -2,7 +2,7 @@
     <div id="app" class="flex h-screen flex-col" :class="getTheme">
         <notifications position="top center" width="100%" />
         <TopNavigation v-if="!store.hideNavigation" class="!hidden bg-white xl:!inline" />
-        <MobilNavigation v-if="!store.hideNavigation" class="!inline xl:!hidden" />
+        <MobileNavigation v-if="!store.hideNavigation" class="!inline xl:!hidden" />
         <div id="app_content" class="mt-16 xl:mt-20 grow bg-white">
             <BreadCrumbs v-if="!store.hideNavigation" class="block" />
             <router-view />
@@ -17,7 +17,7 @@
     import { computed, onMounted, watch } from 'vue';
     import { useI18n } from 'vue-i18n';
     import BreadCrumbs from './components/layout/BreadCrumbs.vue';
-    import MobilNavigation from './components/layout/MobilNavigation.vue';
+    import MobileNavigation from './components/layout/MobileNavigation.vue';
     import { useMainStore } from './stores/MainStore';
     import { useSessionStore } from './stores/SessionStore';
 

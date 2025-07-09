@@ -1,6 +1,6 @@
 <template>
     <aside class="w-64 !hidden xl:!block">
-        <div class="h-full overflow-y-auto bg-white py-4 shadow-right">
+        <nav class="h-full block! overflow-y-auto bg-white py-4 shadow-right">
             <ul class="space-y-2">
                 <li
                     :key="templateRoute.name"
@@ -9,13 +9,13 @@
                     <router-link
                         :title="$t('' + templateRoute?.meta?.title)"
                         :to="templateRoute.path"
-                        class="block w-full p-2 transition-all duration-200"
-                        active-class="bg-vca-dark-500 text-white hover:text-white hover:font-bold">
+                        class="block w-full p-2 hover:text-inherit! hover:opacity-80"
+                        active-class="bg-vca-dark-500 text-white! hover:text-white!">
                         {{ $t('' + templateRoute?.meta?.title) }}
                     </router-link>
                 </li>
             </ul>
-        </div>
+        </nav>
     </aside>
 </template>
 <script lang="ts" setup>

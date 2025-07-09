@@ -487,7 +487,8 @@
             "description": " "
         },
         "name": {
-            "label": "Name des Beispiels"
+            "label": "Name des Beispiels",
+            "placeholder": "z.B. Beispielname"
         },
         "confirm": {
             "add": "Bist du sicher, dass du das Beispiel anlegen möchtest?",
@@ -507,7 +508,8 @@
             "error": "Etwas ist schief gegangen."
         },
         "description": {
-            "label": "Beschreibung"
+            "label": "Beschreibung",
+            "placeholder": "Hier steht die Beschreibung"
         }
     }
 }

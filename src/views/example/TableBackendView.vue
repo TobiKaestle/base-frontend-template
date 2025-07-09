@@ -1,5 +1,5 @@
 <template>
-    <ExampleList :pagination="pagination"></ExampleList>
+    <ExampleBackendList :pagination="pagination" />
     <Popup
         :show="store.current.id"
         @close="closeCurrent()"
@@ -39,11 +39,12 @@
     </Popup>
 </template>
 <script setup lang="ts">
+    import ExampleBackendList from '@/components/example/ExampleBackendList.vue';
     import ExampleDisplay from '@/components/example/ExampleDisplay.vue';
     import ExampleForm from '@/components/example/ExampleForm.vue';
-    import ExampleList from '@/components/example/ExamplesList.vue';
     import { useExamplesStore } from '@/stores/ExamplesStore';
     import api from '@/stores/api';
+    import { Example } from '@/types/Example';
     import {
         Button,
         ButtonSize,
@@ -60,7 +61,9 @@
     const pagination = useAsyncPagination(api.call, 'examples');
 
     onBeforeMount(() => {
-        pagination.request(true);
+        pagination.request(true).then((response: Example[]) => {
+            pagination.setList(response.map((el) => ({ ...el, description: 'AAAA' })));
+        });
     });
 
     const closeCurrent = () => {

@@ -1,20 +1,25 @@
 <template>
     <Column class="gap-4">
-        <Card :bordered="true">
-            <Headline :type="HeadlineType.H4">{{ $t('example.general.label') }}</Headline>
-            <p>{{ $t('example.general.description') }}</p>
-            <Column>
-                <TextField
-                    :label="$t('example.name.label')"
-                    :rules="v$.data.name"
-                    ref="name"
-                    v-model="data.name" />
-                {{ data.description }}
-                <HtmlEditor :label="$t('example.description.label')" v-model="data.description" />
-            </Column>
-        </Card>
+        <section>
+            <Card :bordered="true">
+                <Headline :type="HeadlineType.H4">{{ $t('example.general.label') }}</Headline>
+                <p>{{ $t('example.general.description') }}</p>
+                <Column>
+                    <TextField
+                        :label="$t('example.name.label')"
+                        :placeholder="$t('example.name.placeholder')"
+                        :rules="v$.data.name"
+                        ref="name"
+                        v-model="data.name" />
+                    <HtmlEditor
+                        :label="$t('example.description.label')"
+                        :placeholder="$t('example.description.placeholder')"
+                        v-model="data.description" />
+                </Column>
+            </Card>
+        </section>
         <FormField>
-            <Button @click.prevent="doEmit">
+            <Button @click.prevent="doEmit" :title="$t('button.save')">
                 {{ $t('button.save') }}
             </Button>
         </FormField>

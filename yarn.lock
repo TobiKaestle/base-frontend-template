@@ -1268,10 +1268,10 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz#9e8a512eb174bfc2a333ba959bbf9de428d89ad8"
   integrity sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==
 
-"@vivaconagua/vueca@^2.0.21":
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/@vivaconagua/vueca/-/vueca-2.0.21.tgz#40160731a011187f3a46b90371fda1c871216ee2"
-  integrity sha512-GqjyMnEDAGLbFqVz2cHp5W2jcaKIG0VkucMcvJBNYB6Jaeowi4Z2a9ioYXQLUIV/d1AAfm5Rvy+zybS51BFX0g==
+"@vivaconagua/vueca@^2.0.23":
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/@vivaconagua/vueca/-/vueca-2.0.23.tgz#5a9f4216750c0fcae4be75514781807db274b158"
+  integrity sha512-vqPAjU+JQf72vFRLDgrixJN4GpU7o7kyEKlxbJ0Ky8iJAuIvwTwhnu/K1YUSQl2E+pDOcEGj4IaxSFR60vkoPw==
   dependencies:
     "@stripe/stripe-js" "^1.35.0"
     "@vuelidate/core" "^2.0.0-alpha.44"

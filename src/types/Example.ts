@@ -1,16 +1,16 @@
 import { DropdownOption, Modified } from './Default';
 
-export interface ExampleCreate {
+export type ExampleCreate = {
     name: string;
     description: string;
-}
+};
 
-export interface Example extends ExampleCreate {
+export type Example = ExampleCreate & {
     id: string;
     index?: number;
     name: string;
     description: string;
     modified: Modified;
-}
+};
 
-export interface ExampleDropdown extends Example, DropdownOption {}
+export type ExampleDropdown = Example & DropdownOption;

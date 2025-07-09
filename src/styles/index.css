@@ -5,7 +5,7 @@
     font-family: 'VeneerSoft';
     src: url('../assets/fonts/Veneer/23f300c2-6e76-46a1-8d80-c9f2e9de50aa.woff2') format('woff2');
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400, 500, 600, 700;
 }
 @font-face {
     font-family: 'Roboto Slab';
@@ -43,10 +43,18 @@
     --color-vca-dark-700: #001430;
     --color-vca-dark-800: #000711;
     --color-vca-dark-900: #000000;
+    --shadow-bottom: 0px 10px 10px -5px rgba(0, 0, 0, 0.25);
+    --shadow-right: 10px 0px 10px -5px rgba(0, 0, 0, 0.15);
+    --z-100: 100;
+    --z-200: 200;
 }
 
 body {
     margin: 0;
+}
+
+nav {
+    display: flex;
 }
 
 html,

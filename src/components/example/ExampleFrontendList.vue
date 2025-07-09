@@ -1,7 +1,11 @@
 <template>
-    <div class="p-2">
-        <Headline :type="HeadlineType.H4">{{ $t('table.header.title') }}</Headline>
-        <CustomTable :list="store.list" :labels="tableLabels" :pagination="pagination" colspan="5">
+    <section class="p-2">
+        <Headline :type="HeadlineType.H4">{{ $t('example.header') }}</Headline>
+        <CustomTable
+            :list="store.list"
+            :labels="tableLabels($t)"
+            :pagination="pagination"
+            colspan="5">
             <template #colspan>
                 <col width="1%" />
                 <col width="98%" />
@@ -9,7 +13,10 @@
             </template>
             <template #desktop-options>
                 <div class="my-2">
-                    <Button size="small" @click.prevent="setCreate()">
+                    <Button
+                        size="small"
+                        @click.prevent="setCreate()"
+                        :title="$t('context_button.add', [$t('example.context')])">
                         {{ $t('context_button.add', [$t('example.context')]) }}
                     </Button>
                 </div>
@@ -32,23 +39,25 @@
                     v-for="(res, index) in pagination.getFilteredList()"
                     :key="index">
                     <td class="CustomTable__cell">
-                        <label> {{ index + 1 }} </label>
+                        {{ index + 1 }}
                     </td>
                     <td class="CustomTable__cell">
-                        <label> {{ res.name }} </label>
+                        {{ res.name }}
                     </td>
                     <td class="CustomTable__cell CustomTable__cell__options">
                         <Row>
                             <div class="h-6 w-6">
                                 <div class="h-6 w-6">
-                                    <button @click.prevent="viewCurrent(res)">
-                                        {{ t('table.options.view') }}
+                                    <button
+                                        @click.prevent="viewCurrent(res)"
+                                        :title="$t('button.view')">
+                                        {{ $t('table.options.view') }}
                                     </button>
                                 </div>
                             </div>
                             <div class="h-6 w-6">
-                                <button @click.prevent="setEdit(res)">
-                                    {{ t('table.options.edit') }}
+                                <button @click.prevent="setEdit(res)" :title="$t('button.edit')">
+                                    {{ $t('table.options.edit') }}
                                 </button>
                             </div>
                         </Row>
@@ -72,9 +81,10 @@
                 </tr>
             </template>
         </CustomTable>
-    </div>
+    </section>
 </template>
 <script setup lang="ts">
+    import { tableLabels } from '@/composables/table';
     import { useExamplesStore } from '@/stores/ExamplesStore';
     import { Example } from '@/types/Example';
     import {
@@ -86,24 +96,9 @@
         usePagination,
     } from '@vivaconagua/vueca';
     import { computed, ref, watch } from 'vue';
-    import { useI18n } from 'vue-i18n';
 
     const store = useExamplesStore();
-    const { t } = useI18n();
     const pagination = ref(usePagination());
-
-    const tableLabels = computed(() => {
-        return {
-            search: t('table.search'),
-            page_no_results: t('table.page.no_results'),
-            page_label: t('table.page.label'),
-            page_size: t('table.page.size'),
-            page_first: t('table.page.first'),
-            page_prev: t('table.page.back'),
-            page_next: t('table.page.next'),
-            page_last: t('table.page.last'),
-        };
-    });
 
     pagination.value.setList(store.list);
     pagination.value.pageSize(store.list.length);

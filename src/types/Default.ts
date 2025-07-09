@@ -1,26 +1,26 @@
-export interface Modified {
+export type Modified = {
     created: number;
     updated: number;
-}
+};
 
-export interface DropdownOption {
+export type DropdownOption = {
     label: string;
     value: string;
-}
+};
 
-export interface Url {
+export type Url = {
     id: string;
     title: string;
     url: string;
-}
+};
 
-export interface Role {
+export type Role = {
     name: string;
     label: string;
     user_id: string;
-}
+};
 
-export interface Money {
+export type Money = {
     amount: number;
     currency: string;
-}
+};

@@ -1,6 +1,6 @@
 import { Modified, Role } from './Default';
 
-export interface SessionUser {
+export type SessionUser = {
     id: string;
     email: string;
     first_name: string;
@@ -13,9 +13,9 @@ export interface SessionUser {
     confirmed: boolean;
     last_update: string;
     modified: Modified;
-}
+};
 
-export interface Credentials {
+export type Credentials = {
     email: string;
     password: string;
-}
+};

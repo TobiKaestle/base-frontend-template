@@ -1,5 +1,5 @@
 <template>
-    <TableAsync />
+    <ExampleFrontendList />
     <Popup
         :show="store.current.id"
         @close="closeCurrent()"
@@ -41,7 +41,7 @@
 <script setup lang="ts">
     import ExampleDisplay from '@/components/example/ExampleDisplay.vue';
     import ExampleForm from '@/components/example/ExampleForm.vue';
-    import TableAsync from '@/components/table/TableAsync.vue';
+    import ExampleFrontendList from '@/components/example/ExampleFrontendList.vue';
     import { useExamplesStore } from '@/stores/ExamplesStore';
     import { Button, ButtonSize, ButtonType, Card, Popup } from '@vivaconagua/vueca';
     import { onBeforeMount } from 'vue';

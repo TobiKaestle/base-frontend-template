@@ -1,6 +1,6 @@
 <template>
     <header class="fixed inset-x-0 z-20 h-20 w-screen shadow-md">
-        <div class="container mx-auto flex items-center justify-between py-4">
+        <nav class="container mx-auto flex items-center justify-between py-4">
             <a href="/"><img class="h-12" src="@/assets/img/vca_logo.png" /></a>
 
             <ul
@@ -19,17 +19,17 @@
                 v-model="locale"
                 :type="languageType"
                 :options="$i18n.availableLocales" />
-        </div>
+        </nav>
     </header>
 </template>
 
 <script setup lang="ts">
-    import { computed } from 'vue';
-    import { useRouter } from 'vue-router';
-    import { useI18n } from 'vue-i18n';
-    import { LanguageSelection } from '@vivaconagua/vueca';
     import { navigationList } from '@/composables/navigation';
     import { $i18n } from '@/i18n';
+    import { LanguageSelection } from '@vivaconagua/vueca';
+    import { computed } from 'vue';
+    import { useI18n } from 'vue-i18n';
+    import { useRouter } from 'vue-router';
 
     const languageType = 'text';
 

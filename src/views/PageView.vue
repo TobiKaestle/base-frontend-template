@@ -1,9 +1,9 @@
 <template>
     <div class="flex h-full">
         <LeftNavigation class="hidden xl:block" />
-        <div class="grow p-2">
+        <main class="grow p-2">
             <router-view class="container min-w-full"></router-view>
-        </div>
+        </main>
     </div>
 </template>
 <script lang="ts" setup>

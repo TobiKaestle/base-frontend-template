@@ -1,18 +1,14 @@
 <template>
     <Column class="gap-4">
-        <Row>
-            <div>
-                <Headline :type="HeadlineType.H4">{{ $t('example.general.label') }}</Headline>
-                <Column>
-                    <div class="font-bold">{{ $t('example.name.label') }}</div>
-                    <div>{{ data.name }}</div>
-                </Column>
-                <Column>
-                    <div class="font-bold">{{ $t('example.description.label') }}</div>
-                    <p v-html="data.description" />
-                </Column>
+        <section>
+            <Headline :type="HeadlineType.H4">{{ $t('example.general.label') }}</Headline>
+            <div class="grid grid-cols-4">
+                <div class="font-bold">{{ $t('example.name.label') }}</div>
+                <div>{{ data.name }}</div>
+                <div class="font-bold">{{ $t('example.description.label') }}</div>
+                <p v-html="data.description" />
             </div>
-        </Row>
+        </section>
     </Column>
 </template>
 
@@ -20,7 +16,7 @@
     import { Example } from '@/types/Example';
     import { ref, watch } from 'vue';
 
-    import { Column, Row, Headline, HeadlineType } from '@vivaconagua/vueca';
+    import { Column, Headline, HeadlineType } from '@vivaconagua/vueca';
 
     interface Props {
         modelValue: Example;

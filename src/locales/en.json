@@ -492,10 +492,12 @@
             "description": " "
         },
         "name": {
-            "label": "Example name"
+            "label": "Example name",
+            "placeholder": "e.g. example name"
         },
         "description": {
-            "label": "Description"
+            "label": "Description",
+            "placeholder": "Here is the description"
         },
         "created": {
             "success": "The example has been saved",
